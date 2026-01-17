@@ -1,14 +1,20 @@
-# NuGet Downloader
+# NuGet Downloader - Offline Dependency Resolver
 
-A modern .NET 10 Console Application to recursively calculate and download dependencies for any NuGet package into a flat directory structure. Built with **Spectre.Console** for a beautiful CLI experience.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey)
+![.NET](https://img.shields.io/badge/.NET-10.0-purple)
 
-## Features
+**NuGet Downloader** is a powerful, open-source **CLI tool** designed for developers who need to download NuGet packages and their complete dependency trees for **offline use**. 
 
-- **Recursive Dependency Resolution**: Finds all dependencies for a package targeting a specific framework (e.g., `net10.0`, `net8.0`).
-- **Smart Deduplication**: Ensures every unique package version is downloaded only once.
-- **Flat Output**: All `.nupkg` files are saved to a single `./OfflinePackages` folder, making it easy to use as a local NuGet feed.
-- **Resilient**: Checks for existing files to save bandwidth and handles errors gracefully.
-- **Modern UI**: Features spinners, progress bars, and colored output.
+Whether you are building an air-gapped development environment or simply need to archive specific package versions, this tool simplifies the process by resolving dependencies recursively and saving them into a clean, flat directory structure.
+
+## 🚀 Key Features
+
+- **Recursive Dependency Resolution**: Automatically traverses the dependency graph to find every required package for your target framework (e.g., `net10.0`, `net8.0`, `netstandard2.0`).
+- **Smart Deduplication**: Uses advanced caching to ensure unique package versions are downloaded only once, saving bandwidth and disk space.
+- **Flat Directory Structure**: Downloads all `.nupkg` files into a single `./OfflinePackages` folder, creating an instant **local NuGet feed** source.
+- **Cross-Platform Support**: Fully compatible with **Windows**, **macOS**, and **Linux** thanks to .NET 10.
+- **Modern CLI Experience**: Built with **Spectre.Console** to provide a beautiful terminal interface with progress bars, spinners, and color-coded feedback.
 
 ## Prerequisites
 
